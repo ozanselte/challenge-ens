@@ -1,7 +1,7 @@
 pillow==8.0.1
 tifffile==2020.11.18
 tqdm==4.51.0
-tensorflow-gpu==2.2.0
-tensorflow-addons==0.11.2
+tensorflow-gpu
+tensorflow-addons
 pyyaml
 google-colab
