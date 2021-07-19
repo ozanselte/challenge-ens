@@ -170,6 +170,7 @@ if __name__ == '__main__':
                   #            tf.keras.metrics.Recall(),
                   #            tf.keras.metrics.MeanIoU(num_classes=LCD.N_CLASSES)]) # TODO segmentation metrics
 
+    model.load_weights('/content/drive/MyDrive/experiments/19-07-2021_08:42:37/checkpoints/epoch12')
     # Launch training
     model_history = model.fit(train_dataset, epochs=config.epochs,
                               callbacks=callbacks,
