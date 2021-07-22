@@ -11,6 +11,8 @@ import pandas as pd
 from tqdm import tqdm
 import tensorflow as tf
 
+import sys
+sys.path.append('/content')
 from framework.dataset import LandCoverData as LCD
 from framework.utils import YamlNamespace
 
@@ -83,9 +85,9 @@ def _parse_args():
     parser = argparse.ArgumentParser('Inference script')
     parser.add_argument('--config', '-c', type=str, required=True, help="The YAML config file")
 
-    cli_args = parser.parse_args()
+    cc = '/content/infer_config.yaml'
     # parse the config file
-    with open(cli_args.config, 'r') as f:
+    with open(cc, 'r') as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
     config = YamlNamespace(config)
     config.dataset_folder = Path(config.dataset_folder).expanduser()
